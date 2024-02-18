@@ -1,6 +1,7 @@
 import psutil
 import time
 
+
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1, percpu=True)
     list_cpu = []
