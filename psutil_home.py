@@ -9,7 +9,7 @@ last 2 functions show data in terminal """
 def get_file_str(func):
     with open(f"{func.__name__}.txt", "a") as file:
         file.write(f"{func()} \n")
-    return(func)
+    return func 
 
 
 def get_file_list(func):
