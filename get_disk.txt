@@ -1,3 +1,192 @@
-['\nDevice: C:\\\nFile system: NTFS\nTotal memory: 108.63G\nUsed: 89.65G\nEmpty: 18.99G\nUsage percent: 82.5%', '\nDevice: D:\\\nFile system: NTFS\nTotal memory: 30.96G\nUsed: 9.68G\nEmpty: 21.28G\nUsage percent: 31.3%', '\nDevice: E:\\\nFile system: No usage information available for this device', '\nDevice: F:\\\nFile system: NTFS\nTotal memory: 336.73G\nUsed: 239.43G\nEmpty: 97.31G\nUsage percent: 71.1%'] 
-['\nDevice: C:\\\nFile system: NTFS\nTotal memory: 108.63G\nUsed: 89.64G\nEmpty: 18.99G\nUsage percent: 82.5%', '\nDevice: D:\\\nFile system: NTFS\nTotal memory: 30.96G\nUsed: 9.68G\nEmpty: 21.28G\nUsage percent: 31.3%', '\nDevice: E:\\\nFile system: No usage information available for this device', '\nDevice: F:\\\nFile system: NTFS\nTotal memory: 336.73G\nUsed: 239.43G\nEmpty: 97.31G\nUsage percent: 71.1%'] 
-['\nDevice: C:\\\nFile system: NTFS\nTotal memory: 108.63G\nUsed: 89.65G\nEmpty: 18.99G\nUsage percent: 82.5%', '\nDevice: D:\\\nFile system: NTFS\nTotal memory: 30.96G\nUsed: 9.68G\nEmpty: 21.28G\nUsage percent: 31.3%', '\nDevice: E:\\\nFile system: No usage information available for this device', '\nDevice: F:\\\nFile system: NTFS\nTotal memory: 336.73G\nUsed: 239.43G\nEmpty: 97.31G\nUsage percent: 71.1%'] 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.79G
+Empty: 18.84G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.79G
+Empty: 18.84G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.79G
+Empty: 18.84G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.83G
+Empty: 18.80G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.83G
+Empty: 18.80G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.83G
+Empty: 18.80G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.83G
+Empty: 18.80G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 
+
+Device: C:\
+File system: NTFS
+Total memory: 108.63G
+Used: 89.83G
+Empty: 18.80G
+Usage percent: 82.7% 
+
+Device: D:\
+File system: NTFS
+Total memory: 30.96G
+Used: 9.68G
+Empty: 21.28G
+Usage percent: 31.3% 
+
+Device: E:\
+File system: No usage information available for this device 
+
+Device: F:\
+File system: NTFS
+Total memory: 336.73G
+Used: 239.43G
+Empty: 97.31G
+Usage percent: 71.1% 

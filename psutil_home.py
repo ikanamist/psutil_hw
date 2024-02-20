@@ -8,9 +8,13 @@ last 2 functions show data in terminal"""
 
 
 def get_file(func):
-    with open(f"{func.__name__}.txt", "a") as file:
-        file.write(f"{func()} \n")
-    return func 
+    def decorator():
+        result = func() 
+        with open(f"{func.__name__}.txt", "a") as file:
+            for item in result:
+                file.write(f"{item} \n")
+        return result
+    return decorator
 
 
 @get_file
@@ -30,31 +34,35 @@ def get_cpu():
 
 @get_file
 def get_memory():
+    memory = []
     mem_usage = psutil.virtual_memory()
     total_memory = mem_usage.total / (1024**3)
     used_memory = mem_usage.used / (1024**3)
-    memory = (f"Memory usage: {used_memory:.2f}G/{total_memory:.2f}G")
+    memory.append(f"Memory usage: {used_memory:.2f}G/{total_memory:.2f}G")
     return memory
 
 
 @get_file
 def get_swap():
+    swap_data =[]
     swap = psutil.swap_memory()
     total_swap = swap.total / (1024**3)
     used_swap = swap.used / (1024**3)
-    swap_data = (f"Swap Usage: {used_swap:.2f}G/{total_swap:.2f}G")
+    swap_data.append(f"Swap Usage: {used_swap:.2f}G/{total_swap:.2f}G")
     return swap_data
 
 
 @get_file
 def get_load():
+    load =[]
     load1, load5, load15 = psutil.getloadavg()
-    load = (f"Load average: {load1} {load5} {load15}")
+    load.append(f"Load average: {load1} {load5} {load15}")
     return load
 
 
 @get_file
 def get_uptime():
+    uptime = []
     boot_time = psutil.boot_time()
     current_time = time.time()
     uptime_seconds = current_time - boot_time
@@ -62,7 +70,7 @@ def get_uptime():
     uptime_hours = (uptime_seconds % (24*3600)) // 3600
     uptime_minutes = (uptime_seconds % 3600) // 60
     uptime_seconds = uptime_seconds % 60 
-    uptime = (f"Uptime: {int(uptime_days)} days {int(uptime_hours)}:{int(uptime_minutes)}:{int(uptime_seconds)}")
+    uptime.append(f"Uptime: {int(uptime_days)} days {int(uptime_hours)}:{int(uptime_minutes)}:{int(uptime_seconds)}")
     return uptime
 
 
@@ -121,8 +129,8 @@ def show(cpu, mem, swap, load, uptime, disk, net, pids):
     print(f"{cpu[1]:<45} {cpu[5]:<70}")
     print(f"{cpu[2]:<45} {cpu[6]:<70}") 
     print(f"{cpu[3]:<45} {cpu[7]:<70}")
-    print(f"{mem:<45} {load:<70}")
-    print(f"{swap:<45} {uptime:<70}")
+    print(f"{mem[0]:<45} {load[0]:<70}")
+    print(f"{swap[0]:<45} {uptime[0]:<70}")
     disk_data = disk
     for i in disk_data:
         print(i)
