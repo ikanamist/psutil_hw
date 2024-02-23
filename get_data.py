@@ -3,7 +3,7 @@ import time
 from textwrap import dedent
 import decorator as dec
 
-@dec.get_file
+@dec.get_file()
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1, percpu=True)
     list_cpu = []
@@ -18,7 +18,7 @@ def get_cpu():
     return list_cpu
 
 
-@dec.get_file
+@dec.get_file()
 def get_memory():
     memory = []
     mem_usage = psutil.virtual_memory()
@@ -28,7 +28,7 @@ def get_memory():
     return memory
 
 
-@dec.get_file
+@dec.get_file()
 def get_swap():
     swap_data =[]
     swap = psutil.swap_memory()
@@ -38,7 +38,7 @@ def get_swap():
     return swap_data
 
 
-@dec.get_file
+@dec.get_file()
 def get_load():
     load =[]
     load1, load5, load15 = psutil.getloadavg()
@@ -46,7 +46,7 @@ def get_load():
     return load
 
 
-@dec.get_file
+@dec.get_file()
 def get_uptime():
     uptime = []
     boot_time = psutil.boot_time()
@@ -60,7 +60,7 @@ def get_uptime():
     return uptime
 
 
-@dec.get_file
+@dec.get_file()
 def get_disk():
     disk_partit = psutil.disk_partitions()
     list_disk = []
@@ -81,7 +81,7 @@ def get_disk():
     return list_disk         
 
 
-@dec.get_file
+@dec.get_file()
 def get_net():
     net_io = psutil.net_io_counters(pernic=True)
     list_net = []
@@ -97,7 +97,7 @@ def get_net():
     return list_net   
 
 
-@dec.get_file
+@dec.get_file()
 def get_pids():
     pids_list = []
     for pid in psutil.pids():
