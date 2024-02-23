@@ -1,23 +1,9 @@
 import psutil
 import time
 from textwrap import dedent
+import decorator as dec
 
-"""get_file_str - decorator that write data to a file
-decorated functions get data about my pc
-last 2 functions show data in terminal"""
-
-
-def get_file(func):
-    def decorator():
-        result = func() 
-        with open(f"{func.__name__}.txt", "a") as file:
-            for item in result:
-                file.write(f"{item} \n")
-        return result
-    return decorator
-
-
-@get_file
+@dec.get_file
 def get_cpu():
     cpu_usage = psutil.cpu_percent(interval=1, percpu=True)
     list_cpu = []
@@ -32,7 +18,7 @@ def get_cpu():
     return list_cpu
 
 
-@get_file
+@dec.get_file
 def get_memory():
     memory = []
     mem_usage = psutil.virtual_memory()
@@ -42,7 +28,7 @@ def get_memory():
     return memory
 
 
-@get_file
+@dec.get_file
 def get_swap():
     swap_data =[]
     swap = psutil.swap_memory()
@@ -52,7 +38,7 @@ def get_swap():
     return swap_data
 
 
-@get_file
+@dec.get_file
 def get_load():
     load =[]
     load1, load5, load15 = psutil.getloadavg()
@@ -60,7 +46,7 @@ def get_load():
     return load
 
 
-@get_file
+@dec.get_file
 def get_uptime():
     uptime = []
     boot_time = psutil.boot_time()
@@ -74,7 +60,7 @@ def get_uptime():
     return uptime
 
 
-@get_file
+@dec.get_file
 def get_disk():
     disk_partit = psutil.disk_partitions()
     list_disk = []
@@ -95,7 +81,7 @@ def get_disk():
     return list_disk         
 
 
-@get_file
+@dec.get_file
 def get_net():
     net_io = psutil.net_io_counters(pernic=True)
     list_net = []
@@ -111,7 +97,7 @@ def get_net():
     return list_net   
 
 
-@get_file
+@dec.get_file
 def get_pids():
     pids_list = []
     for pid in psutil.pids():
@@ -122,38 +108,3 @@ def get_pids():
             continue
         pids_list.append(a)
     return pids_list
-
-
-def show(cpu, mem, swap, load, uptime, disk, net, pids):
-    print(f"{cpu[0]:<45} {cpu[4]:<70}") 
-    print(f"{cpu[1]:<45} {cpu[5]:<70}")
-    print(f"{cpu[2]:<45} {cpu[6]:<70}") 
-    print(f"{cpu[3]:<45} {cpu[7]:<70}")
-    print(f"{mem[0]:<45} {load[0]:<70}")
-    print(f"{swap[0]:<45} {uptime[0]:<70}")
-    disk_data = disk
-    for i in disk_data:
-        print(i)
-    net_data = net
-    for i in net_data:
-        print(i)
-    print(f"\n{'Pid':<6} {'User':<22} {'CPU%':<5} {'Mem,mb':<8} Name")
-    data = pids
-    for i in data:
-        print(i)     
-
-
-def main():
-    cpu_info = get_cpu()
-    mem_info = get_memory()
-    swap_info = get_swap()
-    load_info = get_load()
-    time_info = get_uptime()
-    disk_info = get_disk()
-    net_info = get_net()
-    pids_info = get_pids()
-    show(cpu_info, mem_info, swap_info, load_info, time_info, disk_info, net_info, pids_info)
-
-
-if __name__ == "__main__":
-    main()
