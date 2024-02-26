@@ -1,8 +1,0 @@
-Memory usage: 7.43G/15.78G 
-Memory usage: 7.44G/15.78G 
-Memory usage: 7.46G/15.78G 
-Memory usage: 7.25G/15.78G 
-Memory usage: 7.23G/15.78G 
-Memory usage: 7.26G/15.78G 
-Memory usage: 7.25G/15.78G 
-Memory usage: 7.32G/15.78G 
