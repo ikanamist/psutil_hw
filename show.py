@@ -1,6 +1,3 @@
-import get_data as gd
-
-
 def show(cpu, mem, swap, load, uptime, disk, net, pids):
     print(f"{cpu[0]:<45} {cpu[4]:<70}") 
     print(f"{cpu[1]:<45} {cpu[5]:<70}")

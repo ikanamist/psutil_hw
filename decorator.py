@@ -10,14 +10,13 @@ def get_file(file_name=None):
         def wrapper():
             nonlocal file_name
             if file_name is None:
-                file_name = func.__name__
-            file_name_extension = f"{file_name}.json"
-
+                file_name = f"{func.__name__}.json"
+            
             result = func()
             
             added_data = "My_PC"
             json_dict = dict.fromkeys(result, added_data)
-            with open(file_name_extension, "a") as file:                   
+            with open(file_name, "a") as file:                   
                 json_string = json.dumps(json_dict)
                 file.write(f"{json_string}\n")
 
